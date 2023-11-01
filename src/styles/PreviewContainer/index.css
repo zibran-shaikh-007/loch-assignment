@@ -1,0 +1,13 @@
+.preview-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.preview-container .info-wrapper h4 {
+  padding: 1rem 0;
+}
+
+.preview-container .info-wrapper p {
+  color: #f2f2f2;
+  opacity: 0.7
+}

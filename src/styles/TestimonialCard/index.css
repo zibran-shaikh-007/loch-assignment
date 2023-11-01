@@ -1,0 +1,16 @@
+.testimonial-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 22.0625rem;
+  height: 8.5rem;
+  padding: 1.25rem;
+  align-items: flex-start;
+  gap: 1.25rem;
+  border-radius: 0.8rem;
+  background: var(--white);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04), 0px 4px 10px 0px rgba(0, 0, 0, 0.04);
+}
+
+.testimonial-container h5 {
+  margin-right: 0.5rem;
+}

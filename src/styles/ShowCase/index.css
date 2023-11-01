@@ -1,0 +1,69 @@
+.showcase-container {
+  width: 55.55%;
+  background: var(--showcase-bg);
+  padding-top: 5.9722222222%;
+  padding-left: 4.1666666667%;
+  padding-bottom: 4.2366%;
+}
+
+.showcase-container .heading-container {
+  margin-right: 8.3783783784%;
+}
+
+.showcase-container .heading-container h5 {
+  margin-top: 1.375rem;
+  color: #f2f2f2;
+  font-weight: 500;
+  font-size: 1.5625rem;
+  text-align: right;
+}
+
+/* notifications */
+.showcase-container .preview-container.notification {
+  /*  height: 26.7590618337%; */
+  gap: 1.375%;
+}
+
+.showcase-container .preview-container.notification .toolbar {
+  width: 48.7837837838%;
+  margin-left: 6.2162162162%; 
+}
+
+/* whale activity */
+.showcase-container .preview-container.whale {
+  margin-top: 9.73%;
+  margin-right: 8.3783783784%;
+}
+
+.showcase-container .preview-container.whale .toolbar {
+  margin-right: 5.604719764%;
+}
+
+.showcase-container .preview-container.whale .info-wrapper {
+  min-width: 44.9852507375%;
+  text-align: right;
+  /* height: 35.7142857143%; */
+}
+
+/* Testimonals */
+.showcase-container .preview-container.testimonial .toolbar {
+  min-width: 40rem;
+}
+
+.showcase-container .preview-container.testimonial .info-wrapper {
+  align-self: flex-end;
+  margin-right: 2.5rem;
+}
+
+/* media queries */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .showcase-container {
+    width: 65.55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase-container {
+    display: none;
+  }
+}

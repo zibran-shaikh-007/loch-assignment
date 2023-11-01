@@ -1,0 +1,43 @@
+.notification-container {
+  width: 11.8562rem;
+  height: 10.7188rem;
+  border-radius: 0.525rem;
+  padding: 0.875rem;
+  background: var(--white);
+   box-shadow: var(--card-shadow) ;
+}
+
+.notification-container .notification-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notification-container .content h6 {
+  color: var(--grey-900, #19191a);
+}
+
+.notification-container.wallet .content h6,
+.notification-container.activity .content span {
+  font-size: 0.7rem;
+  line-height: var(--line-height);
+}
+
+.notification-container.email .content h6 {
+  margin-top: 0.875rem;
+  margin-bottom: 0.9688rem;
+  padding-right: 2.05rem;
+  font-size: 0.875rem;
+  line-height: var(--line-height);
+}
+
+.notification-container.wallet .content h6 {
+  margin-top: 3.4562rem;
+  margin-bottom: 0.9125rem;
+  padding-right: 0.8562rem;
+}
+
+.notification-container.activity .content h6 {
+  margin-top: 2.45rem;
+  margin-bottom: 0.5625rem;
+  padding-right: 2.1rem;
+}

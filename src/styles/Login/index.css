@@ -1,0 +1,64 @@
+.login-container {
+  width: 44.45%;
+  background-color: var(--white);
+  box-shadow: var(--login-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container .wrapper {
+  width: 57.03125%;
+  height: 33.88671875%;
+  flex-shrink: 0;
+}
+
+.login-container .wrapper > *:not(:last-child) {
+  padding-left: 0.8125rem;
+  padding-right: 0.75rem;
+}
+
+.login-container .wrapper .login-input input {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  box-sizing: border-box;
+  border: 1px solid var(--grey-100, #e5e5e6);
+  box-shadow: var(--input-shadow);
+  border-radius: 0.5rem;
+  height: 100%;
+}
+
+.login-container .wrapper button {
+  width: 100%;
+}
+
+.login-container .wrapper span {
+  color: var(--grey-900, #19191a);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: var(--line-height);
+  display: inline-flex;
+  padding: 1.125rem 0rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+
+.login-container .wrapper .error {
+  color: red;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .login-container {
+    width: 45.45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    width: 100%;
+  }
+}

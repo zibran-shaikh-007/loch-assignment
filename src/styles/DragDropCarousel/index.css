@@ -1,0 +1,43 @@
+.dragdrop-carousel {
+  display: flex;
+  grid-gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x;
+  cursor: grab;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.dragdrop-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.dragdrop-carousel .carousel-item {
+  color: var(--white);
+  scroll-snap-align: start;
+  user-select: none;
+}
+
+.dragdrop-carousel .carousel-item:last-child {
+  min-width: 33.1875rem;
+}
+
+/* Disable smooth scrolling during drag */
+.dragdrop-carousel .carousel-item.grab {
+  scroll-behavior: auto;
+}
+
+/* Hide scrollbar */
+.dragdrop-carousel .carousel-item::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile Styles*/
+@media screen and (max-width: 575px) {
+  .dragdrop-carousel .carousel-item {
+    margin-left: -1rem;
+    width: 100vw;
+    grid-auto-columns: 100%;
+    padding: 0 1rem; /* Adjust padding for smaller screens */
+  }
+}

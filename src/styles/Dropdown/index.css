@@ -1,0 +1,25 @@
+select::-ms-expand {
+  display: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.dropdown-container {
+  background: var(--grey-50, rgba(229, 229, 230, 0.5));
+  padding: 0.2625rem;
+  max-width: 66.4px;
+  min-height: 19.6px;
+  width: 100%;
+  border-radius: 0.175rem;
+  border: none;
+  color: var(--grey-800, #313233);
+  font-size: 0.5687rem;
+  line-height: var(--line-height);
+  background-image: url("https://res.cloudinary.com/uploadfiles/image/upload/v1698194800/loch/om1ijmsk8mzd12tx7x7s.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.4rem center;
+}

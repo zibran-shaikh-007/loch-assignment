@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Inter");
+@import "Component.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+}

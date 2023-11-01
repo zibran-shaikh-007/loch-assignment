@@ -1,0 +1,9 @@
+.minimal-button button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  color: var(--grey-900, #19191a);
+  font-size: 0.5687rem;
+  
+}
