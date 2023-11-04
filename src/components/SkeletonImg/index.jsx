@@ -14,7 +14,7 @@ const SkeletonImg = ({ className, src, alt }) => {
   if (loading)
     return <div className={`skeleton ${className}`} style={{ width: "100%", minHeight: "200px", background: "#f0f0f0" ,opacity:"0.5"}} />;
 
-  return <img className={className} src={src} alt={alt} loading="lazy" />;
+  return <img className={className} src={src} alt={alt} />;
 };
 
 export default SkeletonImg;

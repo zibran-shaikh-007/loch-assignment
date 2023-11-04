@@ -7,7 +7,7 @@ const ShowCase = () => {
       {previewAll.length > 0
         ? previewAll.map((preview, idx) => {
             return (
-              <>
+              <div key={idx}>
                 {preview?.heading && (
                   <div className="heading-container">
                     <h5>{preview.heading}</h5>
@@ -25,7 +25,7 @@ const ShowCase = () => {
                   toolbar={preview.toolbar}
                   swapOrder={preview.type === "whale" ? true : false}
                 />
-              </>
+              </div>
             );
           })
         : ""}
