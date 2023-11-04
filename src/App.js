@@ -1,7 +1,7 @@
 import React, { lazy } from "react";
 import "./styles/App.css";
 import { testimonials, notifications } from "data";
-import TestCarousel from "components/TestCarousel/testCarousel";
+import TestCarousel from "components/InfiniteCarousel";
 import Input from "components/Input";
 import Dropdown from "components/Dropdown/Dropdown";
 import MinimalButton from "components/MinimalButton";

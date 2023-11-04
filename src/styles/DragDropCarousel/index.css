@@ -6,6 +6,7 @@
   cursor: grab;
   scroll-behavior: smooth;
   scrollbar-width: none;
+  padding-right: 1rem;
 }
 
 .dragdrop-carousel::-webkit-scrollbar {
@@ -18,10 +19,6 @@
   user-select: none;
 }
 
-.dragdrop-carousel .carousel-item:last-child {
-  min-width: 33.1875rem;
-}
-
 /* Disable smooth scrolling during drag */
 .dragdrop-carousel .carousel-item.grab {
   scroll-behavior: auto;
@@ -32,12 +29,8 @@
   display: none;
 }
 
-/* Mobile Styles*/
-@media screen and (max-width: 575px) {
-  .dragdrop-carousel .carousel-item {
-    margin-left: -1rem;
-    width: 100vw;
-    grid-auto-columns: 100%;
-    padding: 0 1rem; /* Adjust padding for smaller screens */
+@media (min-width: 1250px) {
+  .dragdrop-carousel .carousel-item:last-child .testimonial-container {
+    min-width: 33.1875rem;
   }
 }

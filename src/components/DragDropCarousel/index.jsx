@@ -1,10 +1,11 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useMemo } from "react";
 
 const DragDropCarousel = ({ data = [], cardRender }) => {
   const wrapperRef = useRef(null);
   const [pressed, setPressed] = useState(false);
   const [startX, setStartX] = useState(0);
 
+  const content = useMemo(() => data, [data]);
 
   const handleMouseDown = (e) => {
     setPressed(true);
@@ -39,7 +40,7 @@ const DragDropCarousel = ({ data = [], cardRender }) => {
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
     >
-      {data?.map((item, index) => (
+      {content?.map((item, index) => (
         <div key={index} className={`carousel-item`}>
           {cardRender(item, index)}
         </div>

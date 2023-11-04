@@ -1,4 +1,3 @@
-import TestCarousel from "components/TestCarousel/testCarousel";
 import InfiniteCarousel from "components/InfiniteCarousel";
 import NotificationCard from "components/NotificationCard";
 import Input from "components/Input";
@@ -44,42 +43,6 @@ const NotificationsPreview = () => {
         );
       }}
     />
-    /*  <TestCarousel
-      data={notifications}
-      isAutoPlay={true}
-      cardRender={(notification, i) => {
-        return (
-          <NotificationCard
-            index={i}
-            className={notification.type}
-            icon={notification.icon}
-            type={notification.type}
-            toolbar={
-              notification?.isCheck ? (
-                <Input type="checkbox" defaultChecked={notification.isCheck} onChange={() => {}} />
-              ) : (
-                <MinimalButton>Save</MinimalButton>
-              )
-            }
-            content={
-              notification?.isCheck ? (
-                <>
-                  <h6>{notification.description}</h6>
-                  <Dropdown options={notification.options} value={notification.options[0].label} onChange={() => {}} />
-                  <br />
-                  {notification?.type === "activity" ? <span>{notification.status}</span> : ""}
-                </>
-              ) : (
-                <>
-                  <h6>{notification.header}</h6>
-                  <Input type="email" value={"hello@loch.one"} disabled />
-                </>
-              )
-            }
-          />
-        );
-      }}
-    /> */
   );
 };
 

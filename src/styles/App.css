@@ -16,4 +16,5 @@ body {
 .App {
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }

@@ -1,8 +1,10 @@
-import React, { useState, useCallback, useMemo, useLayoutEffect } from "react";
+import React, { useState, useCallback, useMemo, useLayoutEffect, useRef } from "react";
 
-const InfiniteCarousel = ({ data, autoflow = 2500, cardRender }) => {
+const InfiniteCarousel = ({ data = [], cardRender, isAutoPlay = true, speed = 2500 }) => {
+  const carouselRef = useRef(null);
+  const cardRef = useRef(null);
+  const [timeoutId, setTimeoutId] = useState(null);
   const [currentLoopIndex, setCurrentLoopIndex] = useState(0);
-  const [isAutoPlay, setIsAutoPlay] = useState(true);
 
   const size = useMemo(() => data.length, [data]);
 
@@ -17,52 +19,47 @@ const InfiniteCarousel = ({ data, autoflow = 2500, cardRender }) => {
     [size]
   );
 
+  const autoPlay = (carousel, cardWidth) => {
+    if (window.innerWidth < 800 || !isAutoPlay) return;
+    const id = setTimeout(() => {
+      carousel.scrollLeft += cardWidth;
+    }, speed);
+    setTimeoutId(id);
+  };
+
   useLayoutEffect(() => {
     let intervalId;
+    const carousel = carouselRef.current;
+    const cardWidth = carousel.querySelector(".card").offsetWidth;
+
     if (isAutoPlay) {
+      autoPlay(carousel, cardWidth);
       intervalId = setInterval(() => {
         setCurrentLoopIndex(currentLoopIndex + 1);
-      }, autoflow);
+      }, speed + 500);
     }
-    return () => clearTimeout(intervalId);
-  }, [isAutoPlay, setCurrentLoopIndex, currentLoopIndex]);
-
-  console.log("length of array", Array(size * 2 + 1))
+    return () => {
+      clearTimeout(timeoutId);
+      clearTimeout(intervalId);
+    };
+  }, [isAutoPlay, currentLoopIndex]);
 
   return (
-    <div
-      className="infiniteCarousel-container"
-      onMouseOver={() => setIsAutoPlay(false)}
-      onMouseOut={() => setIsAutoPlay(true)}
-    >
-      <div
-        className="outer-wrapper"
-        style={{
-          transform: `translateX(${-9.35 * size - 10 * currentLoopIndex}vw)`,
-        }}
-      >
-        <div
-          className="inner-wrapper"
-          style={{
-            transform: `translateX(${10 * currentLoopIndex}vw)`,
-          }}
-        >
-          {Array(size * 2 + 1)
-            .fill(1)
-            .map((_, index) => {
-              const loopIndexToShow = currentLoopIndex + index - size;
-              return {
-                staticIndex: getStaticIndex(loopIndexToShow),
-                loopIndexToShow,
-              };
-            })
-            .map(({ staticIndex, loopIndexToShow }, index) => (
-              <div key={loopIndexToShow} className="carousel-cards">
-                {cardRender(staticIndex, loopIndexToShow)}
-              </div>
-            ))}
-        </div>
-      </div>
+    <div className="infiniteCarousel-container" ref={carouselRef}>
+      {Array(size * 2 + 1)
+        .fill(1)
+        .map((_, index) => {
+          const loopIndexToShow = currentLoopIndex + index - size;
+          return {
+            staticIndex: getStaticIndex(loopIndexToShow),
+            loopIndexToShow,
+          };
+        })
+        .map(({ staticIndex, loopIndexToShow }) => (
+          <div key={loopIndexToShow} className="card" ref={cardRef}>
+            {cardRender(staticIndex, loopIndexToShow)}
+          </div>
+        ))}
     </div>
   );
 };
