@@ -9,7 +9,6 @@ const SkeletonImg = ({ className, src, alt }) => {
     img.onload = () => {
       setLoading(false);
     };
-    //If dynamic img then pass src in dependency array
   }, [src]);
 
   if (loading)

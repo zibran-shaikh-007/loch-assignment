@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   min-width: 22.0625rem;
-  min-height: 8.5rem;
+  height: 8.5rem;
   padding: 1.25rem;
   align-items: flex-start;
   gap: 1.25rem;
@@ -13,4 +13,10 @@
 
 .testimonial-container h5 {
   margin-right: 0.5rem;
+}
+
+@media (max-width: 1279px) {
+  .testimonial-container {
+    height: 100%;
+  }
 }

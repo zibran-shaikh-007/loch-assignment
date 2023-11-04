@@ -1,6 +1,7 @@
 import NotificationsPreview from "components/NotificationsPreview";
 import TestimonialPreview from "components/TestimonialsPreview";
 import WhaleActivityPreview from "components/WhaleActivityPreview";
+import { resources } from "Constants";
 
 export const testimonials = [
   {
@@ -23,13 +24,13 @@ export const testimonials = [
 export const notifications = [
   {
     type: "email",
-    icon: `https://res.cloudinary.com/uploadfiles/image/upload/v1698190681/loch/pgzbe4hivyta8zrfpzzi.svg`,
+    icon: resources.img.notification.bell,
     isCheck: false,
     header: `We’ll be sending notifications to you here`,
   },
   {
     type: "wallet",
-    icon: `https://res.cloudinary.com/uploadfiles/image/upload/v1698190546/loch/e83danbj49iwnqt2isxn.svg`,
+    icon: resources.img.notification.barChart,
     isCheck: true,
     description: "Notify me when any wallets move more than",
     options: [
@@ -42,7 +43,7 @@ export const notifications = [
   },
   {
     type: "activity",
-    icon: `https://res.cloudinary.com/uploadfiles/image/upload/v1698190620/loch/uaewmhlerdrj7gqj747v.svg`,
+    icon: resources.img.notification.clock,
     isCheck: true,
     description: "Notify me when any wallet dormant for",
     options: [
@@ -58,7 +59,7 @@ export const notifications = [
 export const previewAll = [
   {
     type: "notification",
-    icon: "https://res.cloudinary.com/uploadfiles/image/upload/v1698579876/loch/umqosuqv94noslumvrjv.svg",
+    icon: resources.img.bell,
     title: "Get notified when a highly correlated whale makes a move",
     description:
       "Find out when a certain whale moves more than any preset amount on-chain or when a dormant whale you care about becomes active.",
@@ -67,16 +68,15 @@ export const previewAll = [
 
   {
     type: "whale",
-    icon: "https://res.cloudinary.com/uploadfiles/image/upload/v1698579876/loch/fledmbipe3ccmbene0fx.svg",
+    icon: resources.img.eye,
     title: "Watch what the whales are doing",
     description: "All whales are not equal. Know exactly what the whales impacting YOUR portfolio are doing.",
     toolbar: <WhaleActivityPreview />,
   },
   {
     type: "testimonial",
-    icon: "https://res.cloudinary.com/uploadfiles/image/upload/v1698579876/loch/th3x9su9uyubreah3iqd.svg",
+    icon: resources.img.logo2,
     heading: "Testimonials",
-    /* toolbar: <></>, */
-    toolbar:<TestimonialPreview/>
+    toolbar: <TestimonialPreview />,
   },
 ];

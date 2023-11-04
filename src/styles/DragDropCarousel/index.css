@@ -29,7 +29,7 @@
   display: none;
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1280px) {
   .dragdrop-carousel .carousel-item:last-child .testimonial-container {
     min-width: 33.1875rem;
   }

@@ -30,7 +30,7 @@ const Login = () => {
           onChange={(e) => handleEmail(e)}
         />
 
-        <Button /* disabled={!email} */ onClick={handleAccess}>
+        <Button onClick={handleAccess}>
           Get Started
         </Button>
       {error && <span className="error">{error}</span>}

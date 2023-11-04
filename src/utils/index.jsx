@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useState, useMemo } from "react";
 
 export const useOptimisedImage = (path) => {
   const [optimisedImg, setOptimisedImg] = useState(null);
@@ -9,7 +9,7 @@ export const useOptimisedImage = (path) => {
     img.onload = () => {
       setOptimisedImg(img);
     };
-  },[path]);
+  }, [path]);
 
   return optimisedImg;
 };

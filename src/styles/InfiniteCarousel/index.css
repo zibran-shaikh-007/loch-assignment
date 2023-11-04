@@ -23,10 +23,3 @@
 .infiniteCarousel-container .card:nth-child(1) .notification-container {
   background: var(--active-card-bg);
 }
-
-/* .infiniteCarousel-container .card:nth-child(odd) .notification-container {
-  background: linear-gradient(90deg, rgba(119, 119, 119, 1) 0%, rgba(244, 244, 247, 1) 31%);
-}
-.infiniteCarousel-container .card:nth-child(even) .notification-container {
-  background: linear-gradient(90deg, rgba(244, 244, 247, 1) 31%, rgba(102, 101, 101, 1) 73%);
-} */

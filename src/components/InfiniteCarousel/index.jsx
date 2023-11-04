@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo, useLayoutEffect, useRef } from "react";
+import { useState, useCallback, useMemo, useLayoutEffect, useRef } from "react";
 
 const InfiniteCarousel = ({ data = [], cardRender, isAutoPlay = true, speed = 2500 }) => {
   const carouselRef = useRef(null);
