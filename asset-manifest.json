@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/loch-assignment/static/css/main.fd0f2961.css",
+    "main.js": "/loch-assignment/static/js/main.7ffc7381.js",
+    "static/js/275.4fc42afe.chunk.js": "/loch-assignment/static/js/275.4fc42afe.chunk.js",
+    "static/js/455.0c29a274.chunk.js": "/loch-assignment/static/js/455.0c29a274.chunk.js",
+    "index.html": "/loch-assignment/index.html",
+    "main.fd0f2961.css.map": "/loch-assignment/static/css/main.fd0f2961.css.map",
+    "main.7ffc7381.js.map": "/loch-assignment/static/js/main.7ffc7381.js.map",
+    "275.4fc42afe.chunk.js.map": "/loch-assignment/static/js/275.4fc42afe.chunk.js.map",
+    "455.0c29a274.chunk.js.map": "/loch-assignment/static/js/455.0c29a274.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd0f2961.css",
+    "static/js/main.7ffc7381.js"
+  ]
+}
